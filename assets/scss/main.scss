@@ -1,0 +1,11 @@
+@import './normalize';
+@import './variables';
+@import './functions';
+
+
+body{
+  font-family: $primaryFont;
+  font-weight: weight(regular);
+  color: color(textGray);
+  background-color: color(background);
+}
