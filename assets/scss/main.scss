@@ -36,8 +36,8 @@ main {
 
 footer {
 	background-color: color(nav);
-	padding: 0 $xAxisSpacing;
 	height: 7.5rem; // 120px
+	
 	@media screen and (max-width: $breakpointFor-desktop) {
 		padding: 0 $xAxisSpacingMobile
 	}
