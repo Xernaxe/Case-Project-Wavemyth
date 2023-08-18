@@ -1,0 +1,47 @@
+.package{
+  @include flexColumn;
+  gap: 2.1875rem;
+
+  .title{
+    @include flexColumn;
+    gap: 0.9rem;
+    
+
+    &__h{
+      font-weight: weight(regular);
+      font-size: 1.87rem;
+      &-bold{
+        font-weight: weight(bold);
+      }
+    }
+    &__line{
+      width: clamp(300px, 38vw, 529px);
+      height: 1px;
+      background-color: #3A424E;
+      @media screen and (max-width: 750px){
+        width: 100%;
+      }
+      
+    }
+  }
+  
+  .body{
+    @include flexColumn;
+    gap: 1.875rem;
+    width: clamp(500px, 49vw,700px);
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    @media screen and (max-width: 750px){
+      width: 100%;
+      gap: 1.25rem
+    }
+  }
+  
+  &__button{
+    @include mainButton;
+  }
+
+  @media screen and (max-width: 750px){
+    gap: 1.5625rem;
+  }
+}

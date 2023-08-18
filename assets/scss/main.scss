@@ -5,6 +5,7 @@
 @import "./navDesktop";
 @import "./navMobile";
 @import "./footer";
+@import "./package";
 
 body {
 	font-family: $primaryFont;
@@ -20,10 +21,11 @@ header {
 
 main {
 	display: flex;
+	flex-direction: column;
 	max-width: 1440px;
 	margin: auto;
 	padding: $yAxisSpacing $xAxisSpacing;
-	min-height: calc(100vh - 3.75rem * 2);
+	min-height: 100vh;
 	@media screen and (max-width: $breakpointFor-desktop) {
 			padding: $yAxisSpacing $xAxisSpacingMobile
 	}

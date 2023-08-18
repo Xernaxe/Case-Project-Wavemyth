@@ -1,10 +1,22 @@
 @mixin mainButton {
+	width: 111px;
+	height: 32px;
+	background-color: color(accentGreen);
+	color: color(textWhite);
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
 }
 
 @mixin flexItemsCenter($gapSize) {
 	display: flex;
 	align-items: center;
 	gap: $gapSize;
+}
+
+@mixin flexColumn {
+	display: flex;
+	flex-direction: column
 }
 
 @mixin desktopNav($gapSize) {
