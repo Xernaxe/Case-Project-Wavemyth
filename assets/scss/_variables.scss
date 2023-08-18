@@ -1,15 +1,24 @@
-$primaryFont: 'Ubuntu';
+$primaryFont: "Ubuntu";
 $colors: (
-  'background': #1b212b,
-  'nav': #141922,
-  'accentGreen': #46C351,
-  'card': #272B35,
-  'border': #181D26,
-  'textWhite': #FFF,
-  'textGray': #A9B5CC
+	"background": #1b212b,
+	"nav": #141922,
+	"accentGreen": #46c351,
+	"card": #272b35,
+	"border": #181d26,
+	"textWhite": #fff,
+	"textGray": #a9b5cc,
 );
 $fontWeights: (
-  'light': 300,
-  'regular': 400,
-  'bold': 700
+	"light": 300,
+	"regular": 400,
+	"bold": 700,
 );
+$xAxisSpacing: clamp(8rem, 14vw, 12rem);
+$yAxisSpacing: 4.37rem;
+$navDesktopULGap: clamp(1rem, 2.3vw, 2rem);
+$navDesktopWrapperGap: clamp(1rem, 2.3vw, 2.5rem);
+$xAxisSpacingMobile: clamp(4rem, 14vw, 8em);
+
+$breakpoint-desktop: 950px;
+
+// BREAK POINTS NAVDESKTOP : 950PX

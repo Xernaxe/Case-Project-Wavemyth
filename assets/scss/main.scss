@@ -1,11 +1,29 @@
-@import './normalize';
-@import './variables';
-@import './functions';
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+@import "./normalize";
+@import "./navDesktop";
+@import "./navMobile";
 
+body {
+	font-family: $primaryFont;
+	font-weight: weight(regular);
+	color: color(textGray);
+	background-color: color(background);
+}
 
-body{
-  font-family: $primaryFont;
-  font-weight: weight(regular);
-  color: color(textGray);
-  background-color: color(background);
+header {
+	background-color: color(nav);
+	height: 3.75rem; // 60px
+}
+
+main {
+	display: flex;
+	max-width: 1440px;
+	margin: auto;
+	padding: $yAxisSpacing $xAxisSpacing;
+}
+
+.hide {
+	display: none !important;
 }

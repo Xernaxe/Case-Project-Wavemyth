@@ -1,3 +1,23 @@
-@mixin mainButton{
-  
+@mixin mainButton {
+}
+
+@mixin flexItemsCenter($gapSize) {
+	display: flex;
+	align-items: center;
+	gap: $gapSize;
+}
+
+@mixin desktopNav($gapSize) {
+	@include flexItemsCenter($gapSize);
+	padding: 0.5rem;
+	border-radius: 0.375rem;
+	border: 1px solid transparent;
+	scale: 1;
+	transition: background-color 0.25s, scale 0.25s;
+	&:hover {
+		color: color(textWhite);
+		background-color: color(card);
+		border: 1px solid color(border);
+		scale: 1.02;
+	}
 }

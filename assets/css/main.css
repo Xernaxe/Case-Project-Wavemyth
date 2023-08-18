@@ -4,9 +4,201 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #a9b5cc;
+}
+
+.navDesktop {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: space-between;
+  max-width: 1440px;
+  height: 100%;
+  margin: auto;
+  padding: 0 clamp(8rem, 14vw, 12rem);
+}
+.navDesktop .wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.3vw, 2.5rem);
+}
+.navDesktop .wrapper__logo {
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  scale: 1;
+  transition: scale 0.25s;
+}
+.navDesktop .wrapper__logo-bold {
+  font-weight: 700;
+}
+.navDesktop .wrapper__logo:hover {
+  scale: 1.02;
+}
+.navDesktop .wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.3vw, 2rem);
+}
+.navDesktop .wrapper ul a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  scale: 1;
+  transition: background-color 0.25s, scale 0.25s;
+}
+.navDesktop .wrapper ul a:hover {
+  color: #fff;
+  background-color: #272b35;
+  border: 1px solid #181d26;
+  scale: 1.02;
+}
+.navDesktop__cart {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  scale: 1;
+  transition: background-color 0.25s, scale 0.25s;
+  cursor: pointer;
+}
+.navDesktop__cart:hover {
+  color: #fff;
+  background-color: #272b35;
+  border: 1px solid #181d26;
+  scale: 1.02;
+}
+@media (max-width: 950px) {
+  .navDesktop {
+    display: none;
+  }
+}
+
+.navMobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.navMobile__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1b212b;
+  z-index: 1;
+}
+.navMobile__burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: clamp(4rem, 14vw, 8em);
+  z-index: 3;
+}
+@media screen and (max-width: 440px) {
+  .navMobile__burger {
+    padding: 2rem;
+  }
+}
+.navMobile__burger .line {
+  width: 35px;
+  height: 3px;
+  background-color: #a9b5cc;
+}
+.navMobile .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.navMobile .wrapper__logo {
+  text-transform: uppercase;
+  font-size: 2.9rem;
+  scale: 1;
+  transition: scale 0.25s;
+  text-align: center;
+}
+.navMobile .wrapper__logo-bold {
+  font-weight: 700;
+}
+.navMobile .wrapper__logo:hover {
+  scale: 1.02;
+}
+.navMobile .wrapper__UL li {
+  padding: 1rem 0;
+  padding-left: 3rem;
+  border-bottom: 3px solid #181d26;
+}
+.navMobile .wrapper__UL li a {
+  display: flex;
+  gap: 3%;
+  font-size: 1.3rem;
+}
+.navMobile__cart {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  scale: 1;
+  transition: background-color 0.25s, scale 0.25s;
+  cursor: pointer;
+  padding: clamp(4rem, 14vw, 8em);
+}
+.navMobile__cart:hover {
+  color: #fff;
+  background-color: #272b35;
+  border: 1px solid #181d26;
+  scale: 1.02;
+}
+@media screen and (max-width: 440px) {
+  .navMobile__cart {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .navMobile {
+    display: none;
+  }
+}
+
 body {
   font-family: "Ubuntu";
   font-weight: 400;
-  color: #A9B5CC;
+  color: #a9b5cc;
   background-color: #1b212b;
+}
+
+header {
+  background-color: #141922;
+  height: 3.75rem;
+}
+
+main {
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+  padding: 4.37rem clamp(8rem, 14vw, 12rem);
+}
+
+.hide {
+  display: none !important;
 }/*# sourceMappingURL=main.css.map */
