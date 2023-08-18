@@ -6,6 +6,7 @@
 @import "./navMobile";
 @import "./footer";
 @import "./package";
+@import "./journey";
 
 body {
 	font-family: $primaryFont;
@@ -23,6 +24,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	max-width: 1440px;
+	gap: $yAxisSpacing;
 	margin: auto;
 	padding: $yAxisSpacing $xAxisSpacing;
 	min-height: 100vh;
