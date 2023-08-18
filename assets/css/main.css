@@ -180,6 +180,29 @@ a {
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #a9b5cc;
+}
+.footer__p {
+  font-weight: inherit;
+  max-width: 348px;
+}
+.footer__p-center {
+  font-weight: inherit;
+  text-align: center;
+}
+@media screen and (min-width: 440px) {
+  .footer__p-center {
+    text-align: left;
+  }
+}
+
 body {
   font-family: "Ubuntu";
   font-weight: 400;
@@ -197,6 +220,33 @@ main {
   max-width: 1440px;
   margin: auto;
   padding: 4.37rem clamp(8rem, 14vw, 12rem);
+  min-height: calc(100vh - 7.5rem);
+}
+@media screen and (max-width: 950px) {
+  main {
+    padding: 4.37rem clamp(4rem, 14vw, 8em);
+  }
+}
+@media screen and (max-width: 440px) {
+  main {
+    padding: 4.37rem 2rem;
+  }
+}
+
+footer {
+  background-color: #141922;
+  padding: 0 clamp(8rem, 14vw, 12rem);
+  height: 7.5rem;
+}
+@media screen and (max-width: 950px) {
+  footer {
+    padding: 0 clamp(4rem, 14vw, 8em);
+  }
+}
+@media screen and (max-width: 440px) {
+  footer {
+    padding: 0 2rem;
+  }
 }
 
 .hide {

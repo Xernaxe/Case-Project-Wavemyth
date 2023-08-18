@@ -4,6 +4,7 @@
 @import "./normalize";
 @import "./navDesktop";
 @import "./navMobile";
+@import "./footer";
 
 body {
 	font-family: $primaryFont;
@@ -22,6 +23,25 @@ main {
 	max-width: 1440px;
 	margin: auto;
 	padding: $yAxisSpacing $xAxisSpacing;
+	min-height: calc(100vh - 3.75rem * 2);
+	@media screen and (max-width: $breakpointFor-desktop) {
+			padding: $yAxisSpacing $xAxisSpacingMobile
+	}
+	@media screen and (max-width:440px){
+		padding: $yAxisSpacing 2rem
+		}
+}
+
+footer {
+	background-color: color(nav);
+	padding: 0 $xAxisSpacing;
+	height: 7.5rem; // 120px
+	@media screen and (max-width: $breakpointFor-desktop) {
+		padding: 0 $xAxisSpacingMobile
+	}
+	@media screen and (max-width:440px){
+		padding: 0 2rem
+	}
 }
 
 .hide {

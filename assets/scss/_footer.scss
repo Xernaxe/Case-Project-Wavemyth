@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  font-size: 0.8rem;
+  font-weight: weight(light);
+  color: color(textGray);
+  
+  &__p{
+    font-weight: inherit;
+    max-width: 348px;
+    &-center{
+      font-weight: inherit;
+      text-align: center;
+      @media screen and (min-width:440px){ //FIX MEDIA QUERIES
+        text-align: left;
+      }
+    }
+  }
+}
