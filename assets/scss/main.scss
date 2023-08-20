@@ -7,6 +7,7 @@
 @import "./footer";
 @import "./package";
 @import "./journey";
+@import "./slider";
 
 body {
 	font-family: $primaryFont;
@@ -21,30 +22,29 @@ header {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
+	@include flexColumn;
 	max-width: 1440px;
 	gap: $yAxisSpacing;
 	margin: auto;
 	padding: $yAxisSpacing $xAxisSpacing;
 	min-height: 100vh;
 	@media screen and (max-width: $breakpointFor-desktop) {
-			padding: $yAxisSpacing $xAxisSpacingMobile
+		padding: $yAxisSpacing $xAxisSpacingMobile;
 	}
-	@media screen and (max-width:440px){
-		padding: $yAxisSpacing 2rem
-		}
+	@media screen and (max-width: 440px) {
+		padding: $yAxisSpacing 2rem;
+	}
 }
 
 footer {
 	background-color: color(nav);
 	height: 7.5rem; // 120px
-	
+
 	@media screen and (max-width: $breakpointFor-desktop) {
-		padding: 0 $xAxisSpacingMobile
+		padding: 0 $xAxisSpacingMobile;
 	}
-	@media screen and (max-width:440px){
-		padding: 0 2rem
+	@media screen and (max-width: 440px) {
+		padding: 0 2rem;
 	}
 }
 

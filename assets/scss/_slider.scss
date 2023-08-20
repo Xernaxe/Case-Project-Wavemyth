@@ -1,0 +1,154 @@
+.glide {
+	position: relative;
+	&__track {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__slide {
+		display: flex;
+		position: relative;
+		@media screen and (max-width: 1300px) {
+			flex-direction: column;
+		}
+	}
+
+	&__slides {
+		display: flex;
+	}
+
+	&__left {
+		@include flexFullCenter;
+		position: relative;
+		width: 70%;
+		@media screen and (max-width: 1300px) {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			max-height: 395px;
+		}
+	}
+
+	&__right {
+		@include flexColumn;
+		background-color: #2d333d;
+		padding: 1rem;
+		border: 1px solid color(border);
+		border-left: none;
+		justify-content: space-between;
+		width: 30%;
+		@media screen and (max-width: 1300px) {
+			width: 100%;
+			flex-direction: row;
+		}
+
+		@media screen and (max-width: 750px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+		}
+	}
+
+	&__buyCard {
+		padding: 0.54rem 0.71rem 1.12rem;
+		background-color: color(card);
+		border-radius: 10px;
+		border: 1px solid color(border);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		@media screen and (max-width: 1300px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.54rem 2rem 1.12rem;
+		}
+
+		@media screen and (max-width: 750px) {
+			flex-direction: row;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.54rem 2rem 1.12rem;
+		}
+	}
+
+	&__button {
+		@include mainButton;
+		width: 5.82813rem;
+		height: 2.01125rem;
+	}
+
+	&__imageText {
+		position: absolute;
+		top: 1.2rem;
+		left: 1.2rem;
+		h4 {
+			text-transform: uppercase;
+			font-weight: weight(bold);
+		}
+	}
+
+	&__textWrapper {
+		@include flexColumn;
+		gap: 1rem;
+		width: 73%;
+		@media screen and (max-width: 1300px) {
+			gap: 0.5rem;
+		}
+
+		@media screen and (max-width: 750px) {
+			width: 90%;
+		}
+	}
+
+	&__name {
+		font-weight: weight(regular);
+		font-size: 1.85694rem;
+		&-bold {
+			font-weight: weight(bold);
+		}
+
+		@media screen and (max-width: 750px) {
+			text-align: center;
+		}
+	}
+
+	&__price {
+		font-size: clamp(1rem, 2vw, 1.93094rem);
+		line-height: 22px;
+	}
+
+	&__ticket {
+		font-size: 0.84538rem;
+		font-weight: weight(light);
+	}
+	&__arrows {
+		position: absolute;
+		top: 50%;
+		left: -7%;
+		transform: translateY(-50%);
+		display: flex;
+		z-index: 1;
+		width: 114%;
+		justify-content: space-between;
+	}
+	&__arrow {
+		width: 3.324rem;
+		height: 3.1335rem;
+		@media screen and (max-width: 750px) {
+			scale: 0.7;
+		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: color(card);
+		border: 1px solid color(border);
+		border-radius: 5px;
+		cursor: pointer;
+		&-left {
+			rotate: 180deg;
+		}
+	}
+}

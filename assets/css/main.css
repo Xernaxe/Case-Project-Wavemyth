@@ -54,6 +54,7 @@ a {
   border: 1px solid transparent;
   scale: 1;
   transition: background-color 0.25s, scale 0.25s;
+  font-size: 0.98306rem;
 }
 .navDesktop .wrapper ul a:hover {
   color: #fff;
@@ -104,7 +105,7 @@ a {
   flex-direction: column;
   gap: 4px;
   padding: clamp(4rem, 14vw, 8em);
-  z-index: 3;
+  z-index: 11;
 }
 @media screen and (max-width: 440px) {
   .navMobile__burger {
@@ -161,6 +162,7 @@ a {
   scale: 1;
   transition: background-color 0.25s, scale 0.25s;
   cursor: pointer;
+  z-index: 11;
   padding: clamp(4rem, 14vw, 8em);
 }
 .navMobile__cart:hover {
@@ -232,7 +234,7 @@ a {
 .package .title__line {
   width: clamp(300px, 38vw, 529px);
   height: 1px;
-  background-color: #3A424E;
+  background-color: #3a424e;
 }
 @media screen and (max-width: 750px) {
   .package .title__line {
@@ -254,13 +256,16 @@ a {
   }
 }
 .package__button {
-  width: 111px;
-  height: 32px;
   background-color: #46c351;
   color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.9375rem;
+  height: 2rem;
 }
 @media screen and (max-width: 750px) {
   .package {
@@ -313,13 +318,13 @@ a {
   text-transform: lowercase;
 }
 .journey .itemFinal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #272b35;
   width: clamp(125px, 20.5vw, 18.375rem);
   height: clamp(5.5rem, 8.3vw, 7.5rem);
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #181d26;
   border-radius: 3px;
 }
@@ -339,6 +344,176 @@ a {
   font-size: clamp(2rem, 3.6vw, 3.20144rem);
   font-weight: 700;
   line-height: clamp(2rem, 3.5vw, 3.125rem);
+}
+
+.glide {
+  position: relative;
+}
+.glide__track {
+  position: relative;
+  overflow: hidden;
+}
+.glide__slide {
+  display: flex;
+  position: relative;
+}
+@media screen and (max-width: 1300px) {
+  .glide__slide {
+    flex-direction: column;
+  }
+}
+.glide__slides {
+  display: flex;
+}
+.glide__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+}
+@media screen and (max-width: 1300px) {
+  .glide__left {
+    width: 100%;
+  }
+}
+.glide__left img {
+  width: 100%;
+  max-height: 395px;
+}
+.glide__right {
+  display: flex;
+  flex-direction: column;
+  background-color: #2d333d;
+  padding: 1rem;
+  border: 1px solid #181d26;
+  border-left: none;
+  justify-content: space-between;
+  width: 30%;
+}
+@media screen and (max-width: 1300px) {
+  .glide__right {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 750px) {
+  .glide__right {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.glide__buyCard {
+  padding: 0.54rem 0.71rem 1.12rem;
+  background-color: #272b35;
+  border-radius: 10px;
+  border: 1px solid #181d26;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1300px) {
+  .glide__buyCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.54rem 2rem 1.12rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .glide__buyCard {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.54rem 2rem 1.12rem;
+  }
+}
+.glide__button {
+  background-color: #46c351;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.82813rem;
+  height: 2.01125rem;
+}
+.glide__imageText {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+}
+.glide__imageText h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.glide__textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 73%;
+}
+@media screen and (max-width: 1300px) {
+  .glide__textWrapper {
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .glide__textWrapper {
+    width: 90%;
+  }
+}
+.glide__name {
+  font-weight: 400;
+  font-size: 1.85694rem;
+}
+.glide__name-bold {
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  .glide__name {
+    text-align: center;
+  }
+}
+.glide__price {
+  font-size: clamp(1rem, 2vw, 1.93094rem);
+  line-height: 22px;
+}
+.glide__ticket {
+  font-size: 0.84538rem;
+  font-weight: 300;
+}
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  left: -7%;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 1;
+  width: 114%;
+  justify-content: space-between;
+}
+.glide__arrow {
+  width: 3.324rem;
+  height: 3.1335rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #272b35;
+  border: 1px solid #181d26;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  .glide__arrow {
+    scale: 0.7;
+  }
+}
+.glide__arrow-left {
+  rotate: 180deg;
 }
 
 body {
